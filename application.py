@@ -4,12 +4,12 @@ from flask_cors import CORS, cross_origin
 
 
 
-app = Flask(__name__)
-api = Api(app)
-CORS(app)
+application = Flask(__name__)
+#api = Api(app)
+CORS(application)
 
 # class Book(Resource):
-@app.route('/', methods=["GET","POST"])
+@application.route('/', methods=["GET","POST"])
 def get():
     return { "status": { "code": 200},
             "response": {
